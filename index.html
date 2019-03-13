@@ -30,20 +30,27 @@
 			top:350px;
 			left:850px;
 		}
+		.llama {
+			width:200px;
+			top:350px;
+			left:900px;
+		}
 	</style>
 </head>
 <body>
 	<div>
 		<img class="pasture" src="Media/pasture.jpeg">
-		<img class="farm cow" src="Media/cow.png" onclick="plawcow()">
-		<img class="farm pig" src="Media/pig.png">
-		<img class="farm horse" src="Media/horse.png">
-		<img class="farm rooster" src="Media/Rooster.png">
+		<img class="farm cow" src="Media/cow.png" onclick="playcow()">
+		<img class="farm pig" src="Media/pig.png" onclick="playpig()">
+		<img class="farm horse" src="Media/horse.png" onclick="playhorse()">
+		<img class="farm rooster" src="Media/Rooster.png" onclick="playrooster()">
+		<img class="farm llama" src="Media/llama.png" onclick="playllama()">
 
 		<audio src="Media/cow.mp3" data-key="cow" />
 		<audio src="Media/pig.mp3" data-key="pig" />
 		<audio src="Media/horse.mp3" data-key="horse" />
 		<audio src="Media/rooster.mp3" data-key="rooster" />
+		<audio src="Media/bleeeat.wav" data-key="llama" />
 	</div>
 	<script type="text/javascript">
 		function playcow() {
@@ -53,6 +60,21 @@
 		}
 		function playpig() {
 			var audio = document.querySelector("audio[data-key='pig']")
+			audio.currentTime = 0;
+			audio.play();
+		}
+		function playhorse() {
+			var audio = document.querySelector("audio[data-key='horse']")
+			audio.currentTime = 0;
+			audio.play();
+		}
+		function playrooster() {
+			var audio = document.querySelector("audio[data-key='rooster']")
+			audio.currentTime = 0;
+			audio.play();
+		}
+		function playllama() {
+			var audio = document.querySelector("audio[data-key='llama']")
 			audio.currentTime = 0;
 			audio.play();
 		}
