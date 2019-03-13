@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Noisy Farm</title>
+	<style type="text/css">
+		.pasture {
+			width: 100vw;
+			height: 100vh;
+		}
+		.farm {
+			position:absolute;
+		}
+		.horse {
+			width: 300px;
+			top:400px;
+			left:500px;
+		}
+		.pig {
+			width:70px;
+			top:500px;
+			left:200px;
+		}
+		.cow {
+			width:100px;
+			top:370px;
+			left:400px;
+		}
+		.rooster {
+			width:55px;
+			top:350px;
+			left:850px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img class="pasture" src="Media/pasture.jpeg">
+		<img class="farm cow" src="Media/cow.png" onclick="plawcow()">
+		<img class="farm pig" src="Media/pig.png">
+		<img class="farm horse" src="Media/horse.png">
+		<img class="farm rooster" src="Media/Rooster.png">
+
+		<audio src="Media/cow.mp3" data-key="cow" />
+		<audio src="Media/pig.mp3" data-key="pig" />
+		<audio src="Media/horse.mp3" data-key="horse" />
+		<audio src="Media/rooster.mp3" data-key="rooster" />
+	</div>
+	<script type="text/javascript">
+		function playcow() {
+			var audio = document.querySelector("audio[data-key='cow']")
+			audio.currentTime=0;
+			audio.play();
+		}
+		function playpig() {
+			var audio = document.querySelector("audio[data-key='pig']")
+			audio.currentTime = 0;
+			audio.play();
+		}
+	</script>
+
+</body>
+</html>
